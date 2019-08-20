@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Calculator" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="Ok0-q0-lHG">
+                                <rect key="frame" x="15" y="216" width="345" height="431"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="Ojw-km-LVm">
+                                        <rect key="frame" x="0.0" y="0.0" width="345" height="83"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ezz-U0-XHp">
+                                                <rect key="frame" x="0.0" y="0.0" width="83.5" height="83"/>
+                                                <state key="normal" image="グループ化 1.png"/>
+                                                <connections>
+                                                    <action selector="ClearButtonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Fhi-Sn-wss"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xc1-iv-FAA">
+                                                <rect key="frame" x="87.5" y="0.0" width="83" height="83"/>
+                                                <state key="normal" image="グループ化 2.png"/>
+                                                <connections>
+                                                    <action selector="PlusMinusButtonCliked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="nGc-qh-Q4L"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m7J-yG-ZB8">
+                                                <rect key="frame" x="174.5" y="0.0" width="83.5" height="83"/>
+                                                <state key="normal" image="グループ化 3.png"/>
+                                                <connections>
+                                                    <action selector="PercentButtonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="kPd-R1-TYM"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aHc-oT-esf">
+                                                <rect key="frame" x="262" y="0.0" width="83" height="83"/>
+                                                <state key="normal" image="グループ化 4.png"/>
+                                                <connections>
+                                                    <action selector="operatorButtonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="tyb-CJ-CS9"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="mcH-kw-Apb">
+                                        <rect key="frame" x="0.0" y="87" width="345" height="83"/>
+                                        <subviews>
+                                            <button opaque="NO" tag="7" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eWc-1d-KYW">
+                                                <rect key="frame" x="0.0" y="0.0" width="83.5" height="83"/>
+                                                <state key="normal" image="グループ化 5.png"/>
+                                                <connections>
+                                                    <action selector="NumButtonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="0Sf-rS-PH9"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="8" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2jy-iG-MAC">
+                                                <rect key="frame" x="87.5" y="0.0" width="83" height="83"/>
+                                                <state key="normal" image="グループ化 6.png"/>
+                                                <connections>
+                                                    <action selector="NumButtonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="z3s-dh-Sd5"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="9" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8ih-nZ-s0M">
+                                                <rect key="frame" x="174.5" y="0.0" width="83.5" height="83"/>
+                                                <state key="normal" image="グループ化 7.png"/>
+                                                <connections>
+                                                    <action selector="NumButtonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="UWt-7I-O1X"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b6p-4p-N5y">
+                                                <rect key="frame" x="262" y="0.0" width="83" height="83"/>
+                                                <state key="normal" image="グループ化 8.png"/>
+                                                <connections>
+                                                    <action selector="operatorButtonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="jZf-d0-lSz"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="YxO-Pd-ETx">
+                                        <rect key="frame" x="0.0" y="174" width="345" height="83"/>
+                                        <subviews>
+                                            <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oyE-O1-Cwt">
+                                                <rect key="frame" x="0.0" y="0.0" width="83.5" height="83"/>
+                                                <state key="normal" image="グループ化 9.png"/>
+                                                <connections>
+                                                    <action selector="NumButtonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Oft-ca-dhW"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="M3a-Ik-Ej3">
+                                                <rect key="frame" x="87.5" y="0.0" width="83" height="83"/>
+                                                <state key="normal" image="グループ化 10.png"/>
+                                                <connections>
+                                                    <action selector="NumButtonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="DE6-5r-1px"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="6" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FX1-rW-u8U">
+                                                <rect key="frame" x="174.5" y="0.0" width="83.5" height="83"/>
+                                                <state key="normal" image="グループ化 11.png"/>
+                                                <connections>
+                                                    <action selector="NumButtonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="VgY-la-7w5"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ffh-OE-vde">
+                                                <rect key="frame" x="262" y="0.0" width="83" height="83"/>
+                                                <state key="normal" image="グループ化 12.png"/>
+                                                <connections>
+                                                    <action selector="operatorButtonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="zSC-q4-DQv"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="US2-n8-zns">
+                                        <rect key="frame" x="0.0" y="261" width="345" height="83"/>
+                                        <subviews>
+                                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7uD-rD-zYv">
+                                                <rect key="frame" x="0.0" y="0.0" width="83.5" height="83"/>
+                                                <state key="normal" image="グループ化 13.png"/>
+                                                <connections>
+                                                    <action selector="NumButtonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="YTJ-qZ-pFY"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KsL-kG-Mwa">
+                                                <rect key="frame" x="87.5" y="0.0" width="83" height="83"/>
+                                                <state key="normal" image="グループ化 14.png"/>
+                                                <connections>
+                                                    <action selector="NumButtonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dMt-f0-Hu0"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IP0-Ig-Kkr">
+                                                <rect key="frame" x="174.5" y="0.0" width="83.5" height="83"/>
+                                                <state key="normal" image="グループ化 15.png"/>
+                                                <connections>
+                                                    <action selector="NumButtonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="6QA-mX-rtG"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L4d-xX-bYD">
+                                                <rect key="frame" x="262" y="0.0" width="83" height="83"/>
+                                                <state key="normal" image="グループ化 16.png"/>
+                                                <connections>
+                                                    <action selector="operatorButtonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Q5Y-r4-TpK"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="Po2-ze-FvW">
+                                        <rect key="frame" x="0.0" y="348" width="345" height="83"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SWv-S2-Ds7">
+                                                <rect key="frame" x="0.0" y="0.0" width="83.5" height="83"/>
+                                                <state key="normal" image="グループ化 17.png"/>
+                                                <connections>
+                                                    <action selector="NumButtonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="leT-sd-sa7"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yt9-rO-y3p">
+                                                <rect key="frame" x="87.5" y="0.0" width="83" height="83"/>
+                                                <state key="normal" image="グループ化 18.png"/>
+                                                <connections>
+                                                    <action selector="TwoZeroButtonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ouk-Zt-yNc"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UdB-H0-krT">
+                                                <rect key="frame" x="174.5" y="0.0" width="83.5" height="83"/>
+                                                <state key="normal" image="グループ化 19.png"/>
+                                                <connections>
+                                                    <action selector="DotButtonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="nTt-aH-AVk"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cFs-Gl-jT0">
+                                                <rect key="frame" x="262" y="0.0" width="83" height="83"/>
+                                                <state key="normal" image="グループ化 20.png"/>
+                                                <connections>
+                                                    <action selector="EqualButtonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="nye-MY-8MB"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="100000" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HKz-AS-O7R">
+                                <rect key="frame" x="20" y="90" width="335" height="86"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="72"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AxN-qg-qq2">
+                                <rect key="frame" x="323" y="10" width="42" height="42"/>
+                                <state key="normal" image="Photos.png"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.15255417166295368" green="0.14337695134370265" blue="0.67584073604060912" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="AxN-qg-qq2" secondAttribute="trailing" constant="10" id="1h0-2N-Z9A"/>
+                            <constraint firstItem="HKz-AS-O7R" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="XSw-Bo-aIX"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="HKz-AS-O7R" secondAttribute="trailing" constant="20" id="cfQ-ks-jXk"/>
+                            <constraint firstItem="Ok0-q0-lHG" firstAttribute="top" secondItem="HKz-AS-O7R" secondAttribute="bottom" constant="40" id="iEU-gM-rNu"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Ok0-q0-lHG" secondAttribute="bottom" constant="20" id="kNn-16-Rz0"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Ok0-q0-lHG" secondAttribute="trailing" constant="15" id="kaO-DY-lM3"/>
+                            <constraint firstItem="Ok0-q0-lHG" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="15" id="r5v-cm-1hB"/>
+                            <constraint firstItem="AxN-qg-qq2" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="10" id="vVx-8y-C8e"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="ResultLabel" destination="HKz-AS-O7R" id="Wb9-jN-FSq"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="32.799999999999997" y="33.733133433283363"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Photos.png" width="42" height="42"/>
+        <image name="グループ化 1.png" width="83" height="83"/>
+        <image name="グループ化 10.png" width="83" height="83"/>
+        <image name="グループ化 11.png" width="83" height="83"/>
+        <image name="グループ化 12.png" width="83" height="83"/>
+        <image name="グループ化 13.png" width="83" height="83"/>
+        <image name="グループ化 14.png" width="83" height="83"/>
+        <image name="グループ化 15.png" width="83" height="83"/>
+        <image name="グループ化 16.png" width="83" height="83"/>
+        <image name="グループ化 17.png" width="83" height="83"/>
+        <image name="グループ化 18.png" width="83" height="83"/>
+        <image name="グループ化 19.png" width="83" height="83"/>
+        <image name="グループ化 2.png" width="83" height="83"/>
+        <image name="グループ化 20.png" width="83" height="83"/>
+        <image name="グループ化 3.png" width="83" height="83"/>
+        <image name="グループ化 4.png" width="83" height="83"/>
+        <image name="グループ化 5.png" width="83" height="83"/>
+        <image name="グループ化 6.png" width="83" height="83"/>
+        <image name="グループ化 7.png" width="83" height="83"/>
+        <image name="グループ化 8.png" width="83" height="83"/>
+        <image name="グループ化 9.png" width="83" height="83"/>
+    </resources>
+</document>
