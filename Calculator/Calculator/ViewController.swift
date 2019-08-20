@@ -32,6 +32,7 @@ class ViewController: UIViewController,UIImagePickerControllerDelegate, UINaviga
     
     //イコールが押されずに連続して演算子と数字が押されたかどうかを判別する用
     var operatorFirst = true
+    var isStringReset = false
     var picker: UIImagePickerController! = UIImagePickerController()
     
     override func viewDidLoad() {
@@ -54,6 +55,12 @@ class ViewController: UIViewController,UIImagePickerControllerDelegate, UINaviga
     }
     
     @IBAction func NumButtonClicked(_ sender: UIButton) {
+        
+        if(isStringReset){
+            numString = ""
+            isStringReset = false
+        }
+        
         //入力した数字が01とかになるのを防ぐ
         if(numString == "0"){
             numString = ""
@@ -134,6 +141,7 @@ class ViewController: UIViewController,UIImagePickerControllerDelegate, UINaviga
         ResultLabel.text = String(result)
         numString = String(result)
         operatorFirst = true
+        isStringReset = true
     }
     
     //0徐算
@@ -166,8 +174,8 @@ class ViewController: UIViewController,UIImagePickerControllerDelegate, UINaviga
         
         p -= p*2
         
-        //numBuffer = p
-        num = p
+        numBuffer = p
+        //num = p
         numString = String(p)
         
         ResultLabel.text = numString
@@ -220,7 +228,7 @@ class ViewController: UIViewController,UIImagePickerControllerDelegate, UINaviga
         
         ImageView = UIImageView(frame: CGRect(x: 0, y: 0, width: BoundSize_w, height: BoundSize_h))
         
-        ImageView.image = UIImage(named: "Photos.png")
+        //ImageView.image = UIImage(named: "Photos.png")
         
         ImageView.layer.position = CGPoint(x: BoundSize_w/2, y:BoundSize_h/2)
         

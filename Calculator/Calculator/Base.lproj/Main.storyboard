@@ -188,14 +188,14 @@
                                     </stackView>
                                 </subviews>
                             </stackView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="100000" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HKz-AS-O7R">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HKz-AS-O7R">
                                 <rect key="frame" x="20" y="90" width="335" height="86"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="72"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AxN-qg-qq2">
-                                <rect key="frame" x="323" y="10" width="42" height="42"/>
+                                <rect key="frame" x="323" y="35" width="42" height="42"/>
                                 <state key="normal" image="Photos.png"/>
                                 <connections>
                                     <action selector="ImageFolderClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="9lw-9Y-DbH"/>
@@ -205,13 +205,15 @@
                         <color key="backgroundColor" red="0.15255417166295368" green="0.14337695134370265" blue="0.67584073604060912" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="AxN-qg-qq2" secondAttribute="trailing" constant="10" id="1h0-2N-Z9A"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="AxN-qg-qq2" secondAttribute="trailing" constant="10" id="67D-UT-ZP5"/>
                             <constraint firstItem="HKz-AS-O7R" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="XSw-Bo-aIX"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="AxN-qg-qq2" secondAttribute="trailing" constant="10" id="bpi-dL-aLY"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="HKz-AS-O7R" secondAttribute="trailing" constant="20" id="cfQ-ks-jXk"/>
                             <constraint firstItem="Ok0-q0-lHG" firstAttribute="top" secondItem="HKz-AS-O7R" secondAttribute="bottom" constant="40" id="iEU-gM-rNu"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Ok0-q0-lHG" secondAttribute="bottom" constant="20" id="kNn-16-Rz0"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Ok0-q0-lHG" secondAttribute="trailing" constant="15" id="kaO-DY-lM3"/>
+                            <constraint firstItem="AxN-qg-qq2" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="15" id="kg7-Hg-ghk"/>
                             <constraint firstItem="Ok0-q0-lHG" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="15" id="r5v-cm-1hB"/>
-                            <constraint firstItem="AxN-qg-qq2" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="10" id="vVx-8y-C8e"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
