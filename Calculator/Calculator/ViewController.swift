@@ -16,10 +16,11 @@ enum OperatorType{
     case Null
 }
 
-class ViewController: UIViewController {
+class ViewController: UIViewController,UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
     
     @IBOutlet weak var ResultLabel: UILabel!
+    var ImageView: UIImageView!
     
     var numString : String = ""
     var num : Double = 0
@@ -31,10 +32,11 @@ class ViewController: UIViewController {
     
     //イコールが押されずに連続して演算子と数字が押されたかどうかを判別する用
     var operatorFirst = true
+    var picker: UIImagePickerController! = UIImagePickerController()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        GenerateImageView()
         calculateController = CalculateController()
     }
 
@@ -185,6 +187,57 @@ class ViewController: UIViewController {
         numString = String(p)
         
         ResultLabel.text = numString
+    }
+    
+    @IBAction func ImageFolderClicked(_ sender: UIButton) {
+        
+        //let c = UIImagePickerController()
+        //present(c, animated: true)
+        
+        //PhotoLibraryから画像を選択
+        picker.sourceType = UIImagePickerControllerSourceType.photoLibrary
+        
+        //デリゲートを設定する
+        picker.delegate = self
+        
+        //現れるピッカーNavigationBarの文字色を設定する
+        picker.navigationBar.tintColor = UIColor.white
+        
+        //現れるピッカーNavigationBarの背景色を設定する
+        picker.navigationBar.barTintColor = UIColor.gray
+        
+        //ピッカーを表示する
+        present(picker, animated: true, completion: nil)
+    }
+    
+    func GenerateImageView(){
+        
+        // 表示できる限界(bound)のサイズ
+        let BoundSize_w: CGFloat = UIScreen.main.bounds.width
+        let BoundSize_h: CGFloat = UIScreen.main.bounds.height
+        print("\(BoundSize_w),\(BoundSize_h)")  //iPhone6の場合375.0,667.0と出力
+        
+        
+        ImageView = UIImageView(frame: CGRect(x: 0, y: 0, width: BoundSize_w, height: BoundSize_h))
+        
+        ImageView.image = UIImage(named: "Photos.png")
+        
+        ImageView.layer.position = CGPoint(x: BoundSize_w/2, y:BoundSize_h/2)
+        
+        view.addSubview(ImageView)
+        
+        self.view.sendSubview(toBack: ImageView)
+    }
+    func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
+        // キャンセルボタンを押された時に呼ばれる
+        print("Cancel Selected")
+        self.dismiss(animated: true, completion: nil)    }
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
+        // 写真が選択された時に呼ばれる
+        self.dismiss(animated: true, completion: nil)
+        print("Image Selected")
+        let image = info[UIImagePickerControllerOriginalImage] as? UIImage
+        ImageView.image = image
     }
 }
 

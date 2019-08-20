@@ -197,6 +197,9 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AxN-qg-qq2">
                                 <rect key="frame" x="323" y="10" width="42" height="42"/>
                                 <state key="normal" image="Photos.png"/>
+                                <connections>
+                                    <action selector="ImageFolderClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="9lw-9Y-DbH"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.15255417166295368" green="0.14337695134370265" blue="0.67584073604060912" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
